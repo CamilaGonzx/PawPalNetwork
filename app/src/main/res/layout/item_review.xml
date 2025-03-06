@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_review.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- Contenedor para el nombre y el RatingBar en una línea horizontal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        tools:ignore="ExtraText">
+
+        <TextView
+            android:id="@+id/tvNombreUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del usuario"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginEnd="8dp" />
+
+       <TextView
+           android:id="@+id/tvCali"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="@color/black"
+           android:textStyle="bold"
+           android:drawableStart="@drawable/estrella_circular_18"
+           android:drawablePadding="10dp"
+           android:text="5.0"/>
+    </LinearLayout>
+
+    <!-- Comentario debajo del nombre y RatingBar -->
+    <TextView
+        android:id="@+id/tvComentario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comentario breve de la review"
+        android:textSize="12sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_marginTop="4dp" />
+</LinearLayout>
+

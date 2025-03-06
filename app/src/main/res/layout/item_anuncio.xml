@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="325dp"
+    android:layout_marginTop="10dp"
+    android:layout_gravity="center_horizontal"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/white_bg_border"
+    android:layout_height="210dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivserv"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Titulo"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivserv"
+        app:layout_constraintTop_toTopOf="@+id/ivserv" />
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="168dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="4dp"
+        android:text="Nombre"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/verde_menta"
+        app:layout_constraintBottom_toBottomOf="@+id/ivserv"
+        app:layout_constraintStart_toStartOf="@+id/tvTitulo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivserv">
+
+        <TextView
+            android:id="@+id/tvTipo"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.333"
+            android:background="@drawable/grey_bg"
+            android:gravity="center"
+            android:text="Tipo"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvCercania"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:paddingStart="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="0.333"
+            android:background="@drawable/grey_bg"
+            android:gravity="center"
+            android:drawableStart="@drawable/estrella_circular_18"
+
+            android:text="Ranking"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+        <TextView
+            android:id="@+id/tvPrecio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="$ - $"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/verde_menta"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="/H" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.proveedor.ui.editarpublicacion.EditarPublicacion">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            tools:context=".MainActivity">
+
+            <!-- Título de la pantalla: Nueva publicación -->
+            <TextView
+                android:id="@+id/tvTituloPantalla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Editar Publicación"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <!-- Seleccionar el tipo de servicio -->
+            <TextView
+                android:id="@+id/tvSeleccionarServicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecciona el servicio:"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/tvTituloPantalla"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Spinner
+                android:id="@+id/spinnerServicio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/tipo_servicio"
+                android:layout_margin="20dp"
+                app:layout_constraintTop_toBottomOf="@id/tvSeleccionarServicio"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Campo para Título del anuncio -->
+            <TextView
+                android:id="@+id/tvTituloAnuncio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Título:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/spinnerServicio"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/etTituloAnuncio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Escribe el título del anuncio"
+                android:padding="12dp"
+                android:background="@drawable/rounded_edittext"
+                app:layout_constraintTop_toBottomOf="@id/tvTituloAnuncio"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Campo de Precio -->
+            <TextView
+                android:id="@+id/tvPrecio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precio x Hora:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/etTituloAnuncio"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/etPrecio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Escribe el precio/hr"
+                android:padding="12dp"
+                android:inputType="number"
+                android:background="@drawable/rounded_edittext"
+                app:layout_constraintTop_toBottomOf="@id/tvPrecio"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Descripción del anuncio -->
+            <TextView
+                android:id="@+id/tvDescripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/etPrecio"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/etDescripcion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Escribe una descripción"
+                android:padding="12dp"
+                android:minLines="3"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="top"
+                app:layout_constraintTop_toBottomOf="@id/tvDescripcion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+
+            <!-- Sección de imágenes -->
+            <TextView
+                android:id="@+id/tvSeleccionarFotos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecciona imágenes:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/etDescripcion"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/llfotos"
+                app:layout_constraintTop_toBottomOf="@id/tvSeleccionarFotos"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="16dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/addPhotoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agregar fotos"/>
+            </LinearLayout>
+
+            <!-- Botón para agregar imágenes al final -->
+
+
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Editar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llfotos" />
+
+            <Switch
+                android:id="@+id/swarchivar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Archivar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvTituloPantalla"
+                tools:layout_editor_absoluteY="3dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+</FrameLayout>

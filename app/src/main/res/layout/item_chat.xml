@@ -1,0 +1,59 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="8dp"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- Imagen de perfil del usuario -->
+    <ImageView
+        android:id="@+id/ivProfileImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_usuario"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_image_background"/>
+
+    <!-- Contenedor de los textos (nombre del usuario, último mensaje, tiempo) -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Nombre del usuario -->
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del Usuario"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"/>
+
+        <!-- Último mensaje -->
+        <TextView
+            android:id="@+id/tvLastMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Este es el último mensaje..."
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+
+    </LinearLayout>
+
+    <!-- Tiempo del mensaje -->
+    <TextView
+        android:id="@+id/tvMessageTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:30 AM"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp"
+        android:layout_marginStart="8dp"/>
+</LinearLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <!-- Imagen principal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="229dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivMainImage"
+                android:layout_width="match_parent"
+                android:layout_height="206dp"
+                android:src="@drawable/img_login" />
+        </LinearLayout>
+
+        <!-- Título de bienvenida -->
+        <TextView
+            android:id="@+id/tvBienvenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:text="@string/bienvenido" />
+
+        <!-- Subtítulo de ingreso -->
+        <TextView
+            android:id="@+id/tvIngresaCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:layout_weight="1"
+            android:text="Ingresa con tu cuenta"
+            android:textAlignment="center"
+
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <!-- Segunda Imagen (opcional) -->
+        <ImageView
+            android:id="@+id/ivAdditionalImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Foto" />
+
+        <!-- Campo de texto para Email o Teléfono -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tfEmailOrPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo de texto para Contraseña -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:endIconMode="password_toggle"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tfPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:hint="Contaseña"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Opciones de Recordarme y Olvidar Contraseña -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:textAlignment="center">
+
+            <CheckBox
+                android:id="@+id/cbRecordarme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Recordarme"/>
+
+            <TextView
+                android:id="@+id/tvOlvidarContrasena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"
+                android:textStyle="bold"
+                android:text="¿Olvidaste tu contraseña?"/>
+        </LinearLayout>
+
+        <!-- Botón de Ingreso -->
+        <Button
+            android:id="@+id/btnIngresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Ingresar"
+            android:textStyle="bold"
+            android:backgroundTint="@color/orange"
+            app:cornerRadius="10dp"/>
+
+        <!-- Sección para Crear una Nueva Cuenta -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/tvNoCuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:text="¿No tienes una cuenta?"/>
+
+            <TextView
+                android:id="@+id/tvCrearCuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:text="Crea una cuenta"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

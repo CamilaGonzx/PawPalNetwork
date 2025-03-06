@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona un servicio para tu perro"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- RadioGroup to ensure only one option is selected -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio_bano"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Baño"
+
+            android:drawablePadding="10dp"/>
+
+        <RadioButton
+            android:id="@+id/radio_corte_unas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Corte de uñas"
+
+            android:drawablePadding="10dp"/>
+
+        <RadioButton
+            android:id="@+id/radio_paseo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paseo"
+
+            android:drawablePadding="10dp"/>
+
+        <RadioButton
+            android:id="@+id/radio_adiestramiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adiestramiento"
+
+            android:drawablePadding="10dp"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

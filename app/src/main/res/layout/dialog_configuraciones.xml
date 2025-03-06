@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:background="@drawable/borde_bottom">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_appearance"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Apariencia"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:layout_marginStart="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="30dp">
+
+            <RadioGroup
+                android:id="@+id/radio_group_ap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/apariencia_blanco"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:checked="false"
+                    android:enabled="true"
+                    android:paddingStart="10dp"
+                    android:text="Blanco"/>
+                <RadioButton
+                    android:id="@+id/apariencia_obscura"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:checked="false"
+                    android:enabled="true"
+                    android:paddingStart="10dp"
+                    android:text="Obscuro"/>
+                <RadioButton
+                    android:id="@+id/apariencia_predefinida"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:enabled="true"
+                    android:paddingStart="10dp"
+                    android:text="Predefinido por el sistema"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

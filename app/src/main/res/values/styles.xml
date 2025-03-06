@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- styles.xml -->
+<resources>
+    <!-- Estilo personalizado para hacer las estrellas más pequeñas -->
+    <style name="SmallRatingBar" parent="Widget.AppCompat.RatingBar.Indicator">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">16dp</item> <!-- Altura mínima para las estrellas -->
+        <item name="android:maxHeight">16dp</item> <!-- Altura máxima para las estrellas -->
+    </style>
+</resources>

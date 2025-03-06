@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo base existente -->
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/>
+            <corners android:radius="16dp"/>
+            <solid android:color="#D3D3D3"/>
+            <stroke android:width="2dp" android:color="#007AFF"/> <!-- Borde azul -->
+        </shape>
+    </item>
+</layer-list>

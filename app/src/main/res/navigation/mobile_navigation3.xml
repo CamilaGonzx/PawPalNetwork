@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation3"
+    app:startDestination="@+id/navigation_admin_crearuser">
+
+    <fragment
+        android:id="@+id/navigation_admin_crearuser"
+        android:name="com.example.pawpalnetwork.ui.admin.ui.crearusuario.CrearUsuarioFragment"
+        android:label="Crear"
+        tools:layout="@layout/fragment_crear_usuario" />
+
+    <fragment
+        android:id="@+id/navigation_admin_editar"
+        android:name="com.example.pawpalnetwork.ui.admin.ui.editarusuario.EditarUsuarioFragment"
+        android:label="Editar"
+        tools:layout="@layout/fragment_editar_usuario" />
+
+    <fragment
+        android:id="@+id/navigation_admin_eliminar"
+        android:name="com.example.pawpalnetwork.ui.admin.ui.eliminarusuario.EliminarUsuarioFragment"
+        android:label="Eliminar"
+        tools:layout="@layout/fragment_eliminar_usuario" />
+
+    <fragment
+        android:id="@+id/navigation_admin_buscar"
+        android:name="com.example.pawpalnetwork.ui.admin.ui.buscarusuario.BuscarUsuarioFragment"
+        android:label="Buscar"
+        tools:layout="@layout/fragment_buscar_usuario" />
+
+    <fragment
+        android:id="@+id/navigation_admin_estadisticas"
+        android:name="com.example.pawpalnetwork.ui.admin.ui.estadisticas.EstadisticasFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_estadisticas" />
+</navigation>

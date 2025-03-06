@@ -1,0 +1,10 @@
+<!-- res/drawable/background_estado_notificacion.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFA500"/> <!-- Color de fondo -->
+    <corners android:radius="16dp"/> <!-- Radio de los bordes redondeados -->
+    <padding
+        android:left="8dp"
+        android:right="8dp"
+        android:top="4dp"
+        android:bottom="4dp"/>
+</shape>

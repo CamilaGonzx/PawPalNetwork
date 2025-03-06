@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_logoof3"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logoof3"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PawPalNetwork"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.usuario.perfil.ReviewsUsuarioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.proveedor.ui.perfil.EditReviewsProveedorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.proveedor.ui.perfil.EditCuentaProveedorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.usuario.perfilproveedor.PerfilProveedorUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".ui.usuario.confirmarServicio.ConfirmarServicio"
+            android:exported="false" />
+        <activity
+            android:name=".ui.usuario.agendar.Agendar"
+            android:exported="false" />
+        <activity
+            android:name=".SelectLocation"
+            android:exported="false" />
+        <activity
+            android:name=".ui.proveedor.ui.editarpublicacion.EditarPublicacion"
+            android:exported="false" />
+        <activity
+            android:name=".ElegirRol"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.Administrador"
+            android:exported="true"
+            android:label="@string/title_activity_administrador" />
+        <activity
+            android:name=".ui.proveedor.Main_Proveedor"
+            android:exported="false"
+            android:label="@string/title_activity_proveedor" />
+        <activity
+            android:name=".ui.proveedor.ui.perfil.proveedor_Perfil"
+            android:exported="false" />
+        <activity
+            android:name=".ui.usuario.perfil_proveedor"
+            android:exported="false" />
+        <activity
+            android:name=".ui.usuario.perfil.Perfil"
+            android:exported="false" />
+        <activity
+            android:name=".ui.usuario.detalles.Detalles_Servicio"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.pawpalnetwork.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDKRVOnjL--0wWjLd5lOAC7hIfnNnvcyl4" />
+    </application>
+
+</manifest>

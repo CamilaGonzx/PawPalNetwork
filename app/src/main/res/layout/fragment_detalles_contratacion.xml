@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.proveedor.ui.detallescontratacion.DetallesContratacion">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="#F5F5F5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Título de Servicio -->
+            <TextView
+                android:id="@+id/tituloServicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Servicio Contratado"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/primaryTextColor"
+                android:paddingBottom="8dp"/>
+
+            <!-- Estado Actual -->
+            <TextView
+                android:id="@+id/estadoServicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_estado_noti"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"
+                android:text="Cancelar"
+
+                android:textColor="@color/white" />
+
+            <!-- CardView para Detalles del Cliente -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tvTituloDetalles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Detalles del Cliente"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryTextColor"/>
+
+                    <TextView
+                        android:id="@+id/nombreCliente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre del Cliente"
+                        android:textSize="16sp"
+                        android:paddingTop="8dp"/>
+
+                    <TextView
+                        android:id="@+id/contactoCliente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Teléfono: 123-456-7890"
+                        android:textSize="14sp"
+
+                        android:paddingTop="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- CardView para Detalles de la Contratación -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Detalles de la Contratación"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryTextColor"/>
+
+                    <TextView
+                        android:id="@+id/fechaContratacion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha de Contratación: 01/01/2023"
+                        android:textSize="16sp"
+                        android:paddingTop="8dp"/>
+
+                    <TextView
+                        android:id="@+id/fechaInicio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha de Inicio: 01/02/2023 10:00 AM"
+                        android:textSize="16sp"
+                        android:paddingTop="4dp"/>
+
+                    <TextView
+                        android:id="@+id/fechaFin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha de Fin: 01/02/2023 2:00 PM"
+                        android:textSize="16sp"
+                        android:paddingTop="4dp"/>
+
+                    <TextView
+                        android:id="@+id/horasDuracion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Duración Estimada: 1 hora"
+                        android:textSize="16sp"
+                        android:paddingTop="4dp"/>
+
+                    <TextView
+                        android:id="@+id/precioTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Precio Total: $200.00"
+                        android:textSize="16sp"
+                        android:paddingTop="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- CardView para Punto de Encuentro -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Punto de Encuentro"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryTextColor"/>
+
+                    <TextView
+                        android:id="@+id/puntoEncuentro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dirección: Calle Principal 123"
+                        android:textSize="16sp"
+                        android:paddingTop="8dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Botones de Acción -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/btnAceptar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aceptar"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/btnCancelar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancelar"
+                    android:layout_marginEnd="8dp"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnIniciar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/verde_menta"
+                android:visibility="gone"
+                android:text="Iniciar Servicio"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

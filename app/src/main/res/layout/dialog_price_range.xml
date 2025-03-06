@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precio mínimo" />
+
+    <SeekBar
+        android:id="@+id/seekBarMin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="1000"/>
+
+    <TextView
+        android:id="@+id/textMinPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="16sp"
+        android:paddingTop="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precio máximo" />
+
+    <SeekBar
+        android:id="@+id/seekBarMax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="1000"/>
+
+    <TextView
+        android:id="@+id/textMaxPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        android:textSize="16sp"
+        android:paddingTop="8dp" />
+</LinearLayout>

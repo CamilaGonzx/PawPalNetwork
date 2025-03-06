@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.proveedor.ui.procesoServicio.ProcesoServicio">
+
+        <!-- GIF Animado -->
+        <ImageView
+            android:id="@+id/ivGif"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/gif_servicio" />
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progreso"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivGif"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="@color/verde_menta" />
+
+        <!-- Botón Finalizar -->
+        <Button
+            android:id="@+id/btnFinalizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/progreso"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/verde_menta"
+            android:text="Finalizar"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:padding="15dp" />
+
+    </RelativeLayout>
+

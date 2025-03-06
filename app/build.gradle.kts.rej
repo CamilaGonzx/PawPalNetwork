@@ -1,0 +1,9 @@
+diff a/app/build.gradle.kts b/app/build.gradle.kts	(rejected hunks)
+@@ -59,6 +59,7 @@
+ =======
+     implementation(libs.firebase.auth)
+     implementation(libs.recyclerview)
++>>>>>>> camila
+     testImplementation(libs.junit)
+     androidTestImplementation(libs.ext.junit)
+     androidTestImplementation(libs.espresso.core)

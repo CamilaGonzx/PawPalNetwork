@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.usuario.confirmarServicio.ConfirmarServicio">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.detailservice.DetailsServiceFragment"
+        android:background="@color/gray_blue"
+        android:paddingBottom="22dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp"
+                android:background="@drawable/borde_shape">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:text="Estatus del servicio"/>
+
+                    <TextView
+                        android:id="@+id/tvDetEstado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:layout_weight=".3"
+                        android:padding="2dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:background="@drawable/stroke_border"
+                        android:textColor="@color/m3_button_outline_color_selector"
+                        android:text="Pendiente" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/borde_shape">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:text="Dirección"
+                    android:textSize="15sp"/>
+
+                <Button
+                    android:id="@+id/btnObtenerDireccion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Obtener Direccion"
+                    android:textSize="15sp"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvDelDireccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:text="Direccion #1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/borde_shape">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="Tipo de servicio" />
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="5dp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:id="@+id/ivserrvicio"
+                                android:src="@drawable/entrenamiento"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/pasear"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textAlignment="center"
+                                    android:textSize="10dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/borde_shape">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha de la orden:"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tvDelFecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:text="00 Mes 00:00 PM"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:padding="22dp"
+                android:background="@drawable/borde_shape">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/servicios_contratados"
+                    android:textSize="15sp"/>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:columnCount="2"
+                    android:layout_columnWeight="1"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tvDelservConOne"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_columnWeight="1"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/pasear" />
+
+                    <TextView
+                        android:id="@+id/tvDelSevPrecioOne"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textAlignment="textEnd"
+                        android:layout_columnWeight="1"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:text="$10" />
+
+
+
+                    <TextView
+                        android:id="@+id/tvDelSevPrecioThree"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_row="2"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:textColor="@color/black"
+                        android:text="$10"
+                        android:textAlignment="textEnd"
+                        android:textStyle="bold" />
+
+                </GridLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:paddingTop="10dp"
+                android:paddingLeft="22dp"
+                android:paddingRight="22dp"
+                android:paddingBottom="22dp"
+                android:background="@drawable/borde_shape">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:columnCount="2"
+                    android:layout_columnWeight="1"
+                    android:layout_marginTop="5dp">
+
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:layout_columnWeight="1"
+                        android:layout_row="2"
+                        android:layout_column="0"
+                        android:text="@string/total" />
+
+                    <TextView
+                        android:id="@+id/tvDelTotal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_row="2"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:text="$10"
+                        android:textAlignment="textEnd"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"/>
+
+                </GridLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnConfirmarDetalles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:layout_margin="22dp"
+                android:textColor="@color/gray_blue"
+                android:text="Confirmar detalles"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

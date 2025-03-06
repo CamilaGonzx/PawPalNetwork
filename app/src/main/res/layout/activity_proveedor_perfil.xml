@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.proveedor.ui.perfil.proveedor_Perfil">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        >
+
+        <!-- Sección del perfil -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/purple_500"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:gravity="center_vertical">
+
+            <!-- Imagen de perfil -->
+            <ImageView
+                android:id="@+id/ivProfilePicture"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_usuario"
+                android:background="@drawable/rounded_image_background"
+                android:layout_gravity="center_vertical"/>
+
+            <!-- Nombre y usuario -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:id="@+id/tvProfileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Correo"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <!-- Icono de editar perfil -->
+            <ImageView
+                android:id="@+id/ivEditProfile"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_editar"
+                app:tint="@android:color/white" />
+        </LinearLayout>
+
+        <!-- Sección de opciones del perfil -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/white"
+            android:padding="16dp"
+            android:elevation="2dp"
+            android:clipToPadding="false">
+
+            <!-- Mi cuenta -->
+            <LinearLayout
+                android:id="@+id/llEditCuenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_usuario"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mi Cuenta"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Realiza cambios en tu cuenta"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <!-- Flecha para ir a la opción -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_flechader"/>
+            </LinearLayout>
+
+            <!-- Beneficiarios Guardados -->
+            <LinearLayout
+                android:id="@+id/llEditContrasenia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_contra"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Constraseña"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cambiar la contraseña"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_flechader"/>
+            </LinearLayout>
+
+            <!-- Face ID / Touch ID -->
+            <LinearLayout
+                android:id="@+id/llEditReviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_reviews"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reviews"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ver las reviews que tienes"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Autenticación de dos factores -->
+            <LinearLayout
+                android:id="@+id/llEditBorrarCuenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_borrarcuenta"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Borrar Cuenta"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Borrar tu cuenta para siempre"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_flechader"/>
+            </LinearLayout>
+
+            <!-- Cerrar sesión -->
+            <LinearLayout
+                android:id="@+id/llEditCerrarSesion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_cerrarses"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cerrar sesión"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Asegura tu cuenta al salir"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_flechader"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Sección de "Más opciones" -->
+        <TextView
+            android:id="@+id/tvMoreOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Más"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/white"
+            android:padding="16dp"
+            android:elevation="2dp">
+
+            <!-- Ayuda y Soporte -->
+            <LinearLayout
+                android:id="@+id/llEditConfiguracion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_configuracion"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Configuración"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_flechader"/>
+            </LinearLayout>
+
+            <!-- Sobre la App -->
+            <LinearLayout
+                android:id="@+id/llEditAcercade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_info"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sobre la App"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
